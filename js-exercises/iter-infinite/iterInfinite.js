@@ -43,7 +43,7 @@ function* repeat(value, repeatValue) {
   if (value === null || value === undefined) {
     throw new TypeError(`Expected a value, instead got ${value}`);
   }
-  if (!(typeof value === 'function')) {
+  if (typeof value === 'function') {
     throw new TypeError(
       `Expected a value, instead got ${value} of type ${typeof value}`,
     );
